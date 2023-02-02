@@ -1,0 +1,38 @@
+/**
+ * @see https://www.electron.build/configuration/configuration
+ */
+{
+  appId: "com.electron.desktop",
+  asar: true,
+  icon: "public/favicon.ico",
+  copyright: "Copyright © 2022 electron",
+  directories: {
+    // 输出路径
+    output: "release/${version}",
+  },
+  productName: "LLLarry电子书",
+  files: ["dist-electron", "dist"],
+  // mac 配置
+  mac: {
+    artifactName: "${productName}_${version}.${ext}",
+    target: ["dmg"],
+  },
+  // windows 配置
+  win: {
+    target: [
+      {
+        target: "nsis",
+        arch: ["x64"],
+      },
+    ],
+    artifactName: "${productName}_${version}.${ext}",
+  },
+  // 应用程序的安装过程配置
+  nsis: {
+    // 关闭了一键集成，因此会走 下一步、下一步、下一步... 进行安装
+    oneClick: false,
+    perMachine: false,
+    allowToChangeInstallationDirectory: true,
+    deleteAppDataOnUninstall: false,
+  },
+}

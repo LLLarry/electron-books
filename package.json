@@ -1,0 +1,32 @@
+{
+  "name": "electron-books",
+  "private": true,
+  "version": "1.0.0",
+  "main": "dist-electron/index.js",
+  "scripts": {
+    "dev": "chcp 65001 && cross-env NODE_ENV=development vite",
+    "build": "vite build && electron-builder",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@ridi/epub-parser": "^0.7.4-alpha.1",
+    "ant-design-vue": "^3.3.0-beta.4",
+    "axios": "^1.2.6",
+    "bcrypt": "^5.1.0",
+    "cheerio": "^1.0.0-rc.12",
+    "epub2": "^3.0.1",
+    "request": "^2.88.2",
+    "vite-plugin-electron-renderer": "^0.11.4",
+    "vue": "^3.2.45",
+    "vue-router": "4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.0.0",
+    "cross-env": "^7.0.3",
+    "electron": "^22.1.0",
+    "electron-builder": "^23.6.0",
+    "sass": "^1.57.1",
+    "vite": "^4.0.0",
+    "vite-plugin-electron": "^0.11.1"
+  }
+}
